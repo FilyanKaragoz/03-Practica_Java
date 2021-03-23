@@ -1,3 +1,5 @@
+package Ejercicio6;
+
 public class StringUtils
 {
     // Retorna una cadena compuesta por n caracteres c
@@ -79,4 +81,18 @@ public class StringUtils
         if (len==0) return s;
         return  s + replicate(c,len);
     }
+
+    public static String ltrim(String s){
+        return s.replaceAll("^\\s+","");
+    }
+    public static String rtrim(String s){
+        s.replaceAll("\\s+$","");
+    }
+    public static String trim(String s){
+
+    }
+    public static int indexOf(String s,char c , int n){
+
+    }
+
 }
