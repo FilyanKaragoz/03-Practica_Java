@@ -88,11 +88,25 @@ public class StringUtils
     public static String rtrim(String s){
         s.replaceAll("\\s+$","");
     }
-    public static String trim(String s){
-
-    }
-    public static int indexOf(String s,char c , int n){
-
+    public static String trim(String s) {
+        return ltrim(rtrim(s));
     }
 
+    public static int indexOfN(String s, char c, int n) {
+        int posOcurrenciaN = -1;
+        int posControl = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == c)
+                posControl++;
+
+            if (posControl == n) {
+                posOcurrenciaN = i;
+
+                break;
+            }
+        }
+
+        return posOcurrenciaN;
+    }
 }
